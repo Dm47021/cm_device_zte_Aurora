@@ -1,2 +1,2 @@
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/device_force.mk
+    $(LOCAL_DIR)/device_Aurora.mk

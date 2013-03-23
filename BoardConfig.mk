@@ -3,9 +3,9 @@ LOCAL_PATH := $(call my-dir)
 USE_CAMERA_STUB := true
 
 # inherit from the proprietary version
--include vendor/zte/force/BoardConfigVendor.mk
+-include vendor/zte/Aurora/BoardConfigVendor.mk
 
-TARGET_SPECIFIC_HEADER_PATH := device/zte/force/include
+TARGET_SPECIFIC_HEADER_PATH := device/zte/Aurora/include
 
 TARGET_NO_BOOTLOADER := true
 TARGET_BOARD_PLATFORM := msm8960
@@ -27,8 +27,8 @@ TARGET_BOARD_PLATFORM_GPU := qcom-adreno225
 BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom user_debug=31 loglevel=7 kgsl.mmutype=gpummu
 BOARD_KERNEL_BASE := 0x80200000
 BOARD_KERNEL_PAGESIZE := 2048
-TARGET_PREBUILT_KERNEL := device/zte/force/kernel
-TARGET_PREBUILT_RECOVERY_KERNEL := device/zte/force/recovery/kernel
+TARGET_PREBUILT_KERNEL := device/zte/Aurora/kernel
+TARGET_PREBUILT_RECOVERY_KERNEL := device/zte/Aurora/recovery/kernel
 
 # Recovery Defines { Dm47021 }
 BOARD_RECOVERY_HANDLES_MOUNT := true
@@ -39,10 +39,10 @@ BOARD_SYSTEMIMAGE_PARTITION_SIZE := 524288000
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 2908749824
 BOARD_FLASH_BLOCK_SIZE := 131072
 
-TARGET_RECOVERY_INITRC := device/zte/force/recovery/root/init.rc
-BOARD_CUSTOM_GRAPHICS := ../../../device/zte/force/recovery/graphics.c
-BOARD_CUSTOM_RECOVERY_KEYMAPPING:= ../../device/zte/force/recovery/recovery_ui.c
-TARGET_RECOVERY_FSTAB := device/zte/force/recovery.fstab
+TARGET_RECOVERY_INITRC := device/zte/Aurora/recovery/root/init.rc
+BOARD_CUSTOM_GRAPHICS := ../../../device/zte/Aurora/recovery/graphics.c
+BOARD_CUSTOM_RECOVERY_KEYMAPPING:= ../../device/zte/Aurora/recovery/recovery_ui.c
+TARGET_RECOVERY_FSTAB := device/zte/Aurora/recovery.fstab
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"font_7x16.h\"
 RECOVERY_NAME := CWM-based Recovery by:TEAM-0SIRIS
 
@@ -66,11 +66,11 @@ ADDITIONAL_DEFAULT_PROPERTIES += ro.config.sec_storage=1
 ADDITIONAL_DEFAULT_PROPERTIES += persist.sys.usb.config=mass_storage,adb
 
 # USB
-BOARD_CUSTOM_USB_CONTROLLER := ../../device/zte/force/UsbController.cpp
+BOARD_CUSTOM_USB_CONTROLLER := ../../device/zte/Aurora/UsbController.cpp
 BOARD_USE_USB_MASS_STORAGE_SWITCH := true
 BOARD_UMS_LUNFILE := /sys/devices/platform/msm_hsusb/gadget/lun0/file
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun0/file
 
 # Releasetools
 TARGET_PROVIDES_RELEASETOOLS := true
-TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := ./device/zte/force/releasetools/force_ota_from_target_files
+TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := ./device/zte/Aurora/releasetools/Aurora_ota_from_target_files
